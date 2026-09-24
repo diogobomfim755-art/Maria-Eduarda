@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>dedico esse pra você 💙</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;overflow:hidden;font-family:Arial,sans-serif;background:linear-gradient(145deg,#eaf8ff,#cfeeff 50%,#e3f6ff);display:flex;align-items:center;justify-content:center;color:#286080}.hearts{position:fixed;inset:0;pointer-events:none}.heart{position:absolute;color:#65bce6;font-size:50px;opacity:.85}.h1{top:4%;left:3%;transform:rotate(-15deg)}.h2{top:8%;right:4%;font-size:70px}.h3{bottom:7%;left:5%;font-size:62px}.h4{bottom:4%;right:4%;transform:rotate(-18deg)}.h5{top:48%;left:1%;font-size:32px}.h6{top:39%;right:1%;font-size:38px}.card{width:min(92vw,560px);max-height:94vh;overflow:auto;background:rgba(255,255,255,.75);backdrop-filter:blur(14px);border:1px solid white;border-radius:32px;padding:26px 22px 30px;box-shadow:0 22px 60px rgba(55,135,170,.22);text-align:center;position:relative;z-index:2}h1{margin:0 0 18px;font-size:clamp(27px,6vw,39px);color:#397fa3}.video{width:100%;aspect-ratio:9/16;max-height:67vh;border-radius:24px;overflow:hidden;background:#d9f2ff;position:relative;box-shadow:0 12px 32px rgba(40,128,170,.18)}video{width:100%;height:100%;object-fit:cover}.start{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(207,238,255,.35);cursor:pointer}.hidden{display:none}.play{width:105px;height:105px;border:0;border-radius:50%;background:white;box-shadow:0 10px 30px rgba(44,125,165,.25);display:grid;place-items:center}.spider{width:48px;height:56px;border-radius:48%;background:linear-gradient(#d83b4b 54%,#245a9b 55%);position:relative;border:2px solid #183f71}.spider:before,.spider:after{content:"";position:absolute;top:16px;width:12px;height:7px;background:white;border:2px solid #183f71;border-radius:70% 30%}.spider:before{left:5px}.spider:after{right:5px}.text{font-weight:bold;color:#397fa3}.tiktok{display:inline-block;margin-top:18px;padding:13px 22px;border-radius:999px;background:#74c5ea;color:white;text-decoration:none;font-weight:bold}.small{font-size:12px;margin-top:12px;color:#79a6b9}
+</style>
+</head>
+<body>
+<div class="hearts"><div class="heart h1">♥</div><div class="heart h2">♥</div><div class="heart h3">♥</div><div class="heart h4">♥</div><div class="heart h5">♥</div><div class="heart h6">♥</div></div>
+<main class="card">
+<h1>dedico esse pra você 💙</h1>
+<div class="video">
+<video id="video" src="video.mp4" playsinline preload="metadata"></video>
+<div class="start" id="start"><button class="play"><span class="spider"></span></button><div class="text">Começar o vídeo</div></div>
+</div>
+<a class="tiktok" href="https://vt.tiktok.com/ZSq3fnXV4/" target="_blank">Ver no TikTok 💙</a>
+<div class="small">Um pedacinho especial feito para você.</div>
+</main>
+<script>
+const v=document.getElementById("video"),s=document.getElementById("start");
+s.onclick=async()=>{s.classList.add("hidden");try{await v.play()}catch(e){s.classList.remove("hidden")}};
+v.onended=()=>s.classList.remove("hidden");
+</script>
+</body>
+</html>
